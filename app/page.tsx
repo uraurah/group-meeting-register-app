@@ -50,7 +50,7 @@ export default function SetupPage() {
         <h1 className="text-[24px] font-bold text-[#2D2D2D]">所属班設定</h1>
       </header>
       <section className="px-4 pt-8">
-        <h2 className="text-[24px] font-bold text-[#2D2D2D]">所属するクラブと班を<br />選択してください</h2>
+        <h2 className="mb-8 text-[24px] font-bold text-[#2D2D2D]">所属するクラブと班を<br />選択してください</h2>
 
         <div className="mb-8">
           <label className="text-[20px] font-Regular text-[#787878]">
