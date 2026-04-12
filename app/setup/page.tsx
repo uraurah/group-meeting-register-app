@@ -1,7 +1,9 @@
 'use client'
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function SetupPage() {
+  const router = useRouter()
   const [club, setClub] = useState('')
   const [group, setGroup] = useState('')
 
@@ -39,9 +41,15 @@ export default function SetupPage() {
   const groups = club ? clubGroups[club] ?? [] : []
 
   const handleSave = () => {
+    if (!club || !group) {
+      alert('クラブと班を選択してください')
+      return
+    }
+
     localStorage.setItem('club', club)
     localStorage.setItem('group', group)
     alert('保存しました')
+    router.push('/')
   }
 
   return (
@@ -65,6 +73,7 @@ export default function SetupPage() {
               }}
               className="w-full h-[48px] border border-[#D4D4D4] bg-white rounded-[8px] px-4 pr-12 text-[24px] font-Regular text-[#3B3B3B] appearance-none outline-none"
            >
+              <option value="">選択してください</option>
               {clubs.map((item) => (
                 <option key={item} value={item}>
                   {item}
@@ -88,6 +97,9 @@ export default function SetupPage() {
               }
               className="w-full h-[48px] border border-[#D4D4D4] bg-white rounded-[8px] px-4 pr-12 text-[24px] font-Regular text-[#3B3B3B] appearance-none outline-none"
            >
+              <option value="">
+                {club ? '選択してください' : '先にクラブを選択してください'}
+              </option>
               {groups.map((item) => (
                 <option key={item} value={item}>
                   {item}

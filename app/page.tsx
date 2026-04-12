@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
-export default function HomePage() {
+export default function Home() {
   const router = useRouter()
   const [club, setClub] = useState('')
   const [group, setGroup] = useState('')
