@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+  <meta charset ="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ivusa 班会登録</title>
+  <link rel="icon" href="/img/mtg-reg-icon.png">
+  <link rel="apple-touch-icon" href="/img/mtg-reg-icon.png">
+
+  <script src="/js/common.js"></script>
+  <script src="./js/index.js" defer></script>
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="index-body">
+  <header class="header">
+    <h1 class="header-title">班会登録</h1>
+  </header>
+  <form action="/api/php/" method="POST" id="DataForm">
+  <input type="hidden" name="rev" value="etc/urata.ivusa.com/mtg-reg" id="From-rev">
+  <main class="main">
+    <div class="categories">
+      <div class="category-wrapper">
+        <p class="category-name">登録先</p>
+        <p id="name2" class="category-data"></p>
+      </div>
+
+      <div class="category-wrapper">
+        <p class="category-name">実施日時</p>
+        <p id="date" class="category-data date"></p>
+        <input type="date" name="open_at" id="Form-open_at">
+        <div id="Calendar"></div>
+      </div>
+
+      <div class="category-wrapper">
+        <p class="category-name">参加者</p>
+        <div class="name-and-reaction">
+          <p id="join" class="category-data-participant"></p>
+        </div>
+
+        <div class="reaction_ex">
+          <p>◎ 早い: 概ね1日以内に返信がある</p>
+          <p>○ 普通: 2日～1週間以内に返信がある</p>
+          <p>△ 遅い: 返信に1週間以上 or 返信無し</p>
+        </div>
+        
+      </div>
+
+      <div class="btn-wrapper-blue">
+        <button class="btn-blue" type="button" id="SubmitBtn" onClick="DataSubmit()">登録する</button>
+      </div>
+
+    </div>
+
+  </main>
+  </form>
+  <div id="Admin"></div>
+
+</body>
+</html>

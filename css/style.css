@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+:root {
+    --blue: #4E8CFF;
+    --light-blue: #E3F1FF;
+    --light-blue02: #FBFDFF;
+    --white: #FFFFFF;
+    --black: #3B3B3B;
+    --gray: #D4D4D4;
+    --green: #55C554;
+    --light-green: #A9DBA8;
+    --light-green02: #FDFFFB;
+}
+
+/* body */
+.index-body {
+    background: var(--light-blue02);
+}
+
+@media screen and (min-width: 768px) {
+  .index-body {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+}
+
+.complete-body {
+    background: var(--light-green02);
+    padding: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .complete-body {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+}
+
+/* header */
+.header {
+    background: var(--blue);
+    height: 70px;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+
+/* main content */
+.categories {
+    padding: 24px;
+}
+
+.category-wrapper {
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--gray);
+    margin: 0 auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.category-wrapper:not(:first-child) {
+    margin-top: 18px;
+}
+
+.category-name {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 0 16px;
+    color: var(--blue);
+}
+
+.category-data {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+}
+
+.date {
+    position: relative;
+}
+
+.date::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/calendar-icon.png");
+    color: var(--black);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-48%);
+}
+
+.description {
+    font-size: 14px;
+    color: var(--black);
+    padding: 2px 20px 12px 20px;
+}
+
+.category-data-participant {
+    font-size: 18px;
+    color: var(--black);
+}
+
+
+/* button */
+.btn-wrapper-blue {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.btn-blue {
+    height: 48px;
+    width: 100%;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 36px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30);
+    position: relative;
+}
+
+.btn-blue::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid var(--white);
+    border-right: 3px solid var(--white);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 98px;
+}
+
+.btn-wrapper-white {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.btn-white {
+    height: 48px;
+    width: 100%;
+    background: var(--white);
+    color: var(--blue);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 36px;
+    border-color: var(--gray);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.30);
+    position: relative;
+}
+
+.btn-white::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid var(--blue);
+    border-right: 3px solid var(--blue);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 74px;
+}
+
+
+/* complete page */
+.complete-check {
+    font-size: 36px;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.complete-txt {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.complete-txt-sub {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-content {
+    margin-top: 36px;
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    padding-bottom: 16px;
+}
+
+.content-txt {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--green);
+    padding-top: 16px;
+    padding-left: 28px;
+}
+
+.meta-data {
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.meta-data-name {
+    font-size: 20px;
+    color: var(--black);
+    margin-left: 28px;
+}
+
+.meta-data-data {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: bold;
+    margin-left: 48px;
+}
+
+
+/* reaction */
+.name-and-reaction {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+
+.reaction-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table.participants{
+    font-size:14px;
+}
+table.participants td{
+    padding-bottom:0.5em;
+}
+table.participants input[type=checkbox]{
+    margin-left:0.5em;
+}
+table.participants div.resrag{
+    display:flex;
+}
+table.participants div.resrag label{
+    position:relative;
+}
+table.participants div.resrag input{
+    position:absolute;
+    z-index:-1;
+    opacity:0;
+}
+.reaction {
+    width: 36px;
+    height: 30px;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+    margin-left: 16px;
+    background: var(--white);
+    font-size: 16px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.TargetMySelf .reaction{
+    border:none;
+}
+
+table.participants div.resrag input:checked ~ .reaction{
+    background: var(--light-blue);
+    border-color: var(--blue);
+}
+/*
+.reaction.reaction_btn-click {
+    background: var(--light-blue);
+    border-color: var(--blue);
+}
+*/
+
+.reaction_ex {
+    margin: 14px 20px;
+    padding: 12px 14px;
+    background: var(--light-blue);
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+
+
+.JoinLabel{
+    display:none;
+}
+
+.complete-body .description{
+    display:none;
+}
+.complete-body table.participants div.resrag input ~ .reaction{
+    display:none;
+}
+.complete-body table.participants div.resrag input:checked ~ .reaction{
+    display:flex;
+    background:none;
+}
+.complete-body input{
+    display:none;
+}
+.complete-body input:checked ~ .JoinLabel{
+    display:inline;
+}
+.complete-body table.participants td{
+    text-align:center;
+}

@@ -1,0 +1,32 @@
+.category-data.date{
+    cursor:pointer;
+}
+#Calendar{
+    position:relative;
+    display:none;
+}
+#Calendar table{
+    max-width:500px;
+    border:1px solid #c0c0c0;
+    background:#ffffff;
+    position:absolute;
+    z-index:2;
+}
+#Calendar table td{
+    padding:0.2em 0.5em;
+    text-align:center;
+}
+#Calendar table td:hover{
+    color:#ff9030;
+}
+#Form-open_at{
+    position:absolute;
+    z-index:-1;
+    opacity:0;
+}
+#resrag{
+    line-height:1.5em;
+}
+#Admin{
+    padding-bottom:3em;
+}

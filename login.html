@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form action="https://www.ivusa.com/member/" method="POST">
+<input type="hidden" name="res" value="passthru">
+<input type="hidden" name="fwd" value="" id="Form-fwd">
+ID<input type="text" name="iid"><br>
+PASS<input type="password" name="ips"><br>
+<input type="submit" value="ログイン"><br>
+</form>
+<script type="text/javascript">
+const params=new URLSearchParams(window.location.search);
+if(params.get("fwd")){document.getElementById("Form-fwd").value="https://"+location.host+params.get("fwd");}
+</script>
+</body>
+</html>
